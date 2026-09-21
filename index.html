@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <span class="eyebrow">// Spotlight</span>
             <h2>Technical Projects</h2>
           </div>
-          <span class="counter">02 / 02</span>
+          <span class="counter">04 / 04</span>
         </div>
         <div class="project-list">
           <article class="project-card">
@@ -98,6 +98,36 @@
             </ul>
             <div class="tags"><span class="tag">Frontend</span><span class="tag">Relational DB</span><span class="tag">NoSQL</span><span class="tag">API Design</span></div>
           </article>
+
+          <article class="project-card">
+                <div>
+              <span class="label">Polytechnic · Infocomm Infrastructure Project · 2024/25</span>
+              <h3>Enterprise Network Design &amp; Security</h3>
+            </div>
+                <p>Team of two: designed and configured a segmented enterprise network with Cisco routers and switches, plus Windows Server domain services.</p>
+                <ul class="features">
+                  <li>Split the network into Marketing, Finance and IT VLANs on /27 subnets, with static and default routes between the ISP and NYP routers.</li>
+                  <li>Set up DNS, DHCP, HTTP and RDP on Windows Server, with PCs joining the domain.</li>
+                  <li>Wrote extended ACLs controlling HTTPS, RDP and SFTP per VLAN: IT can remote into Marketing but is blocked from Finance.</li>
+                  <li>Fixed a routing gap to the ISP loopback and an ACL that broke DHCP, by adding explicit DHCP permits.</li>
+                </ul>
+                <div class="tags"><span class="tag">Cisco IOS</span><span class="tag">VLANs</span><span class="tag">ACLs</span><span class="tag">Windows Server</span><span class="tag">DNS / DHCP</span></div>
+              </article>
+
+          <article class="project-card">
+                <div>
+              <span class="label">Polytechnic · Virtualisation &amp; Cloud Computing · 2024/25</span>
+              <h3>VMware vSphere Virtual Infrastructure</h3>
+            </div>
+                <p>Built and tested a virtualised environment end to end on VMware, and compared it with alternative hypervisors.</p>
+                <ul class="features">
+                  <li>Deployed vCenter (VCSA), a datacenter, a content library and a TinyCore VM template; ran a persistent web server and SSH on the VMs.</li>
+                  <li>Configured vMotion across two ESXi hosts, with vSphere HA and DRS verified by shutting down a host.</li>
+                  <li>Created a CPU alarm (above 90%) that restarts the VM, validated with a load-test script.</li>
+                  <li>Compared Microsoft Hyper-V and Red Hat Virtualization on features, scalability, licensing and cloud integration.</li>
+                </ul>
+                <div class="tags"><span class="tag">VMware ESXi</span><span class="tag">vCenter</span><span class="tag">vMotion</span><span class="tag">HA &amp; DRS</span><span class="tag">Linux / SSH</span></div>
+              </article>
         </div>
       </section>
 
@@ -143,34 +173,6 @@
                   <span class="tag">VMware vSphere</span><span class="tag">vMotion, HA &amp; DRS</span>
                 </div>
               </div>
-            </div>
-
-            <div class="mini-projects">
-              <h4>Polytechnic Projects · Nanyang Polytechnic, 2024/25</h4>
-              <article class="mini-project">
-                <span class="label">Infocomm Infrastructure Project</span>
-                <h3>Enterprise Network Design &amp; Security</h3>
-                <p>Team of two: designed and configured a segmented enterprise network with Cisco routers and switches, plus Windows Server domain services.</p>
-                <ul class="features">
-                  <li>Split the network into Marketing, Finance and IT VLANs on /27 subnets, with static and default routes between the ISP and NYP routers.</li>
-                  <li>Set up DNS, DHCP, HTTP and RDP on Windows Server, with PCs joining the domain.</li>
-                  <li>Wrote extended ACLs controlling HTTPS, RDP and SFTP per VLAN: IT can remote into Marketing but is blocked from Finance.</li>
-                  <li>Fixed a routing gap to the ISP loopback and an ACL that broke DHCP, by adding explicit DHCP permits.</li>
-                </ul>
-                <div class="tags"><span class="tag">Cisco IOS</span><span class="tag">VLANs</span><span class="tag">ACLs</span><span class="tag">Windows Server</span><span class="tag">DNS / DHCP</span></div>
-              </article>
-              <article class="mini-project">
-                <span class="label">Virtualisation &amp; Cloud Computing</span>
-                <h3>VMware vSphere Virtual Infrastructure</h3>
-                <p>Built and tested a virtualised environment end to end on VMware, and compared it with alternative hypervisors.</p>
-                <ul class="features">
-                  <li>Deployed vCenter (VCSA), a datacenter, a content library and a TinyCore VM template; ran a persistent web server and SSH on the VMs.</li>
-                  <li>Configured vMotion across two ESXi hosts, with vSphere HA and DRS verified by shutting down a host.</li>
-                  <li>Created a CPU alarm (above 90%) that restarts the VM, validated with a load-test script.</li>
-                  <li>Compared Microsoft Hyper-V and Red Hat Virtualization on features, scalability, licensing and cloud integration.</li>
-                </ul>
-                <div class="tags"><span class="tag">VMware ESXi</span><span class="tag">vCenter</span><span class="tag">vMotion</span><span class="tag">HA &amp; DRS</span><span class="tag">Linux / SSH</span></div>
-              </article>
             </div>
           </div>
 
@@ -304,6 +306,6 @@
   <button type="button" class="lb-close" id="lb-close" aria-label="Close photo">&times;</button>
   <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
 </dialog>
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
