@@ -68,3 +68,18 @@ if (!reduceMotion && "IntersectionObserver" in window) {
   );
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 }
+
+// ---------- photo lightbox ----------
+const lightbox = document.getElementById("lightbox");
+const lbImg = document.getElementById("lb-img");
+const lbCap = document.getElementById("lb-cap");
+document.querySelectorAll(".thumb").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    lbImg.src = btn.dataset.full;
+    lbImg.alt = btn.querySelector("img").alt;
+    lbCap.textContent = btn.dataset.caption;
+    lightbox.showModal();
+  });
+});
+document.getElementById("lb-close").addEventListener("click", () => lightbox.close());
+lightbox.addEventListener("click", (e) => { if (e.target === lightbox) lightbox.close(); });
